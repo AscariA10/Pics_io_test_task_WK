@@ -1,16 +1,7 @@
+import { useState, useEffect } from 'react';
+import { getAllComments } from '../utilits/fetch';
+
 export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      My new Template
-    </div>
-  );
+  const result = getAllComments().then(response => console.log(response.data.comments));
+  return <div>My new Template</div>;
 };
