@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+import { FormWrapper, FormTitle, TextArea, SubmitButton, Form } from './UserCommentForm.styled';
+
 export const UserCommentForm = ({ addComment }) => {
   const savedComment = JSON.parse(localStorage.getItem('saved-user-comment'));
 
@@ -21,12 +23,12 @@ export const UserCommentForm = ({ addComment }) => {
   }
   console.log(input);
   return (
-    <div>
-      <p>this is user form</p>
-      <form method="input" onSubmit={onSubmit}>
-        <textarea value={input} onChange={onChange}></textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+    <FormWrapper>
+      <FormTitle>User Comment</FormTitle>
+      <Form method="input" onSubmit={onSubmit}>
+        <TextArea value={input} onChange={onChange}></TextArea>
+        <SubmitButton type="submit">Submit</SubmitButton>
+      </Form>
+    </FormWrapper>
   );
 };

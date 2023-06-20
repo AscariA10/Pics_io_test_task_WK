@@ -5,7 +5,6 @@ export const CommentsListWrapper = styled.ul`
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
-  border: 1px dashed green;
 `;
 
 export const CommentItem = styled.li`
